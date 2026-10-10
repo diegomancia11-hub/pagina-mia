@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#0b3d91">
+<title>Nuestra historia 💙</title>
+<style>
+:root{--blue:#0b3d91;--blue2:#1d70d6;--soft:#eaf3ff;--ink:#172033}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#eaf3ff,#fff);color:var(--ink)}
+.lock{position:fixed;inset:0;background:linear-gradient(135deg,#06285f,#1d70d6);display:grid;place-items:center;z-index:10;padding:24px}
+.card{background:#fff;border-radius:24px;padding:30px;max-width:390px;width:100%;text-align:center;box-shadow:0 20px 60px #001b3b55}
+.card h1{margin:0 0 8px;color:var(--blue)} .card p{color:#64748b}
+input{width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;margin:8px 0}
+button{border:0;border-radius:12px;padding:13px 18px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer;width:100%}
+.err{color:#c62828;min-height:22px;font-size:14px}
+main{max-width:900px;margin:auto;padding:28px 18px 70px}
+.hero{min-height:55vh;display:grid;place-items:center;text-align:center;padding:50px 10px}
+.badge{display:inline-block;background:#dbeafe;color:var(--blue);padding:8px 14px;border-radius:999px;font-weight:700}
+h1{font-size:clamp(36px,8vw,68px);line-height:1.02;margin:18px 0 12px;color:var(--blue)}
+.hero p{font-size:20px;max-width:650px;margin:auto;line-height:1.6}
+.section{background:#fff;border-radius:24px;padding:24px;margin:22px 0;box-shadow:0 10px 35px #0b3d9114}
+h2{color:var(--blue);margin-top:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.gallery img,.gallery video{width:100%;border-radius:18px;display:block;background:#dbeafe}
+.caption{text-align:center;color:#64748b;margin:10px 0 0}
+.timeline{display:grid;gap:12px}.date{padding:16px;background:var(--soft);border-left:5px solid var(--blue);border-radius:12px}
+.letter{line-height:1.8;font-size:17px;white-space:pre-line}
+.final{text-align:center;padding:55px 20px}
+.heart{font-size:54px}
+small{color:#64748b}
+</style>
+</head>
+<body>
+<div class="lock" id="lock">
+  <div class="card">
+    <div style="font-size:46px">💙</div>
+    <h1 style="font-size:34px">Un lugar para nosotros</h1>
+    <p>Esta página es privada. Ingresa la contraseña para entrar.</p>
+    <input id="pw" type="password" placeholder="Contraseña" autocomplete="off">
+    <button onclick="unlock()">Entrar</button>
+    <div class="err" id="err"></div>
+    <small>Consejo: cambia la contraseña en el archivo index.html antes de publicarla.</small>
+  </div>
+</div>
+
+<main id="content" hidden>
+<section class="hero">
+  <div>
+    <span class="badge">Nuestra historia 💙</span>
+    <h1>Nuestra historia, pequeña y sumando más momentos hermosos</h1>
+    <p>La felicidad mía tiene nombre y apellido.<br><strong>Ericka Hernández</strong></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>💙 Nosotros</h2>
+  <p class="letter">Hay momentos que parecen pequeños cuando pasan, pero con el tiempo se convierten en recuerdos que uno quiere guardar para siempre. Esta página es un pedacito de nuestra historia: nuestras fotos, nuestros momentos y todo lo bonito que todavía nos queda por vivir.</p>
+</section>
+
+<section class="section">
+  <h2>📸 Nuestros momentos</h2>
+  <div class="gallery">
+    <figure><img src="assets/foto-01.jpg" alt="Momento juntos"><figcaption class="caption">Un momento que quiero guardar para siempre.</figcaption></figure>
+    <figure><img src="assets/foto-02.jpg" alt="Recuerdo juntos"><figcaption class="caption">Otro recuerdo de nosotros. 💙</figcaption></figure>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🎥 Recuerdos en movimiento</h2>
+  <div class="gallery">
+    <video controls playsinline preload="metadata" src="assets/video-01.mp4"></video>
+    <video controls playsinline preload="metadata" src="assets/video-02.mp4"></video>
+  </div>
+</section>
+
+<section class="section">
+  <h2>📅 Fechas importantes</h2>
+  <div class="timeline">
+    <div class="date"><strong>5 de septiembre</strong><br>El primer beso. 💙</div>
+    <div class="date"><strong>11 de septiembre</strong><br>Una de nuestras salidas favoritas.</div>
+    <div class="date"><strong>24 de agosto de 2026</strong><br>El día desde el que comienza nuestro contador.</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>⏱️ Desde aquel día</h2>
+  <div id="counter" style="font-size:25px;font-weight:800;color:var(--blue);text-align:center;padding:18px"></div>
+</section>
+
+<section class="section">
+  <h2>💌 Una carta para ti</h2>
+  <div class="letter">Ericka:
+
+Quiero que esta página sea un pequeño recordatorio de lo mucho que significan para mí nuestros momentos. No necesito que sean perfectos para querer guardarlos; me basta con saber que son nuestros.
+
+Quiero seguir sumando recuerdos, fotografías, risas, salidas y todas esas cosas que algún día vamos a mirar y decir: “Mirá todo lo que hemos vivido”.
+
+Gracias por formar parte de mi historia. 💙</div>
+</section>
+
+<section class="final">
+  <div class="heart">💙</div>
+  <h2>Y esto apenas comienza...</h2>
+  <p>Que vengan muchos más recuerdos, muchas más fotos y muchas más historias de nosotros.</p>
+</section>
+</main>
+
+<script>
+/* CAMBIA ESTA CONTRASEÑA antes de publicar. */
+const PASSWORD = "Ericka2026";
+
+function unlock(){
+  const value=document.getElementById("pw").value;
+  if(value===PASSWORD){
+    sessionStorage.setItem("privateLovePage","ok");
+    document.getElementById("lock").style.display="none";
+    document.getElementById("content").hidden=false;
+    startCounter();
+  }else{
+    document.getElementById("err").textContent="Contraseña incorrecta.";
+  }
+}
+function startCounter(){
+  const start=new Date("2026-08-24T00:00:00");
+  const el=document.getElementById("counter");
+  function tick(){
+    let s=Math.max(0,Math.floor((Date.now()-start.getTime())/1000));
+    const d=Math.floor(s/86400); s%=86400;
+    const h=Math.floor(s/3600); s%=3600;
+    const m=Math.floor(s/60); s%=60;
+    el.textContent=`${d} días, ${h} horas, ${m} minutos y ${s} segundos`;
+  }
+  tick(); setInterval(tick,1000);
+}
+if(sessionStorage.getItem("privateLovePage")==="ok"){
+  document.getElementById("lock").style.display="none";
+  document.getElementById("content").hidden=false;
+  startCounter();
+}
+</script>
+</body>
+</html>
